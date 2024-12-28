@@ -1,0 +1,144 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffd3e2;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --button-color: #d4145a;
+  --button-hover: #f6a74c;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.admin-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 50px;
+}
+
+button {
+  background: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.course-card h3 {
+  color: var(--primary-color);
+  margin: 10px 0;
+}
+
+.course-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-btn {
+  background: #28a745;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 500px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--primary-color);
+}
+
+.form-group input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
